@@ -1,25 +1,31 @@
 #include <iostream>
+#include <string>
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::toupper;
 
-void uppercase_ft(string s)
+void megaphone(char **str)
 {
-	for(size_t i = 0; i < s.length(); i++)
-    {
-        if(s[i] >= 'a' && s[i] <= 'z')
-		    cout << (char)(s[i] - 32);
-        else
-            cout << (char)s[i];
-    }
+	for(int i = 1; str[i]; i++)
+	{
+        for(int j = 0; str[i][j]; j++)
+		{
+			if(str[i][j] >= 'a' && str[i][j] <= 'z')
+				cout<<(char)toupper(str[i][j]);
+			else
+				cout<<str[i][j];
+		}
+	}
+	cout<<endl;
 }
 
-int	main(int argc, char *argv[])
+
+int main(int argc, char **argv)
 {
-	if (argc > 1)
-		for (int i = 1; i < argc; i++)
-			uppercase_ft(argv[i]);
+    if(argc < 2)
+        cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *"<<endl;
 	else
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	cout << endl;
-	return (0);
+    	megaphone(argv);
+    return (0);
 }

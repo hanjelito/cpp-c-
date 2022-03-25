@@ -1,4 +1,4 @@
-SRCS	= Diaanio.cpp main.cpp
+SRCS	= main.cpp Contact.cpp PhoneBook.cpp
 OBJS	= ${SRCS:.cpp=.o}
 NAME	= Phonebook
 CLANG	= clang++ 

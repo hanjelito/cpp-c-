@@ -8,6 +8,8 @@ using std::string;
 class Contact
 {
 	private:
+		static int _index;
+		int		_ID;
 		string	_first_name;
 		string	_last_name;
 		string	_nick_name;
@@ -16,6 +18,7 @@ class Contact
 	public:
 		Contact()
 		{
+			this->_index = this->_ID;
 		}
 		~Contact()
 		{
@@ -40,6 +43,15 @@ class Contact
 		{
 			this->_darkest_secret = darkest_secret;
 		}
+		void indexID()
+		{	
+			this->_ID++;
+		}
+		int getID()
+		{
+			this->_index = this->_ID;
+			return this->_ID;
+		}
 		string getFirstName() const
 		{
 			return this->_first_name;
@@ -61,6 +73,7 @@ class Contact
 			return this->_darkest_secret;
 		}
 		void RequestData();
+		void Print();
 		// void Add();
 };
 

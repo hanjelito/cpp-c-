@@ -7,6 +7,11 @@ static  void Add(std::string &value, std::string msg)
     std::cin >> temp;
     value = temp;
 }
+void Contact::Print()
+{
+    std::cout << getFirstName() <<std::endl;
+}
+
 void Contact::RequestData()
 {
     Add(_first_name, "Insert your First Name: ");

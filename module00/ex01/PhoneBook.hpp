@@ -13,8 +13,9 @@ class PhoneBook
         ~PhoneBook()
         {
         }
-        void create();
-
+        void Create(Contact *contact);
+        void Read(Contact *contact);
+        void Menu();
 };
 
 #endif

@@ -3,8 +3,8 @@
 
  int main()
  {
-    PhoneBook *run = new PhoneBook();
-    run->create();
-      
-    return (0); 
+	PhoneBook *run = new PhoneBook();
+	run->Menu();
+	delete run;
+	return (0); 
  }

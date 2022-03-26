@@ -1,7 +1,8 @@
 SRCS	= main.cpp Contact.cpp PhoneBook.cpp
+HEADERS	= Contact.h PhoneBook.h
 OBJS	= ${SRCS:.cpp=.o}
 NAME	= Phonebook
-CLANG	= clang++ 
+CLANG	= c++ 
 RM		= rm -f
 CFLAGS	= -Wall -Werror -Wextra -std=c++98
 

@@ -13,9 +13,11 @@ class PhoneBook
         ~PhoneBook()
         {
         }
+        void PrintS(std::string str);
         void Create(Contact *contact);
         void Read(Contact *contact);
         void Menu();
+        void headers();
 };
 
 #endif

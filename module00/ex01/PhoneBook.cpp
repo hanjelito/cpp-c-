@@ -4,6 +4,12 @@
 
 
 int Contact::_index = 0;
+
+void PhoneBook::PrintS(std::string str)
+{
+    std::cout << str << std::endl;
+}
+
 void PhoneBook::Create(Contact *contact)
 {   
     int i;
@@ -15,20 +21,21 @@ void PhoneBook::Create(Contact *contact)
 
 void PhoneBook::Read(Contact *contact)
 {
-    std::cout << "|    index |  f. name |  l. name | nickname |" << std::endl;
+    headers();
     for(int i = 0; i < 8; i++)
     {
-        std::cout << (contact + i)->getFirstName() << std::endl;
+        PrintS((contact + i)->getFirstName());
     }
 }
 
 void PhoneBook::Menu()
 {
-    Contact *contact = new Contact[8];
     std::string menu;
+    
+    Contact *contact = new Contact[8];
     while (1)
     {
-        std::cout << "SELECT ADD, SEARCH, EXIT" << std::endl;
+        PrintS("SELECT ADD, SEARCH, EXIT");
         std::cin >> menu;
         if (menu == "ADD")
             Create(contact);
@@ -37,4 +44,11 @@ void PhoneBook::Menu()
         else if (menu == "EXIT")
             break;
     }
+}
+
+void PhoneBook::headers()
+{
+    PrintS("+----------+----------+----------+----------+");
+    PrintS("|    index |  f. name |  l. name | nickname |");
+    PrintS("+----------+----------+----------+----------+");
 }

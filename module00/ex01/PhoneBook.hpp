@@ -16,6 +16,8 @@ class PhoneBook
         {
         }
         void PrintS(std::string str);
+        void PrintS(std::string str, int salt);
+        void UserContact();
         void Add(void);
         void Read(void);
         void Menu(void);

@@ -1,4 +1,3 @@
-#include <cctype>
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -8,9 +7,33 @@
 
 int Contact::_index = 0;
 
+void PhoneBook::PrintS(std::string str, int nosalt)
+{
+    (void)nosalt;
+    std::cout << str;
+}
+
 void PhoneBook::PrintS(std::string str)
 {
-    std::cout << str << std::endl;
+        std::cout << str << std::endl;
+}
+
+void PhoneBook::UserContact()
+{
+    int select;
+
+    PrintS("\033[32mSelect a contact the table: \033[0m", 0);
+    std::cin >> select;
+    if (select > 0 && select < 9)
+    {
+        PrintS("\033[32mFirst Name:\033[0m " + (_contact + select - 1)->getFirstName());
+        PrintS("\033[32mLast Name:\033[0m " + (_contact + select - 1)->getLastName());
+        PrintS("\033[32mNickname:\033[0m " + (_contact + select - 1)->getNickName());
+        PrintS("\033[32mPhone:\033[0m " + (_contact + select - 1)->getDarkestSecret());
+        PrintS("\033[32mDarkest secret:\033[0m " + (_contact + select - 1)->getDarkestSecret());
+    }
+    else
+        PrintS("\033[31mNumber out of range!\033[0m");
 }
 
 void PhoneBook::Add()
@@ -24,7 +47,6 @@ void PhoneBook::Add()
 
 void PhoneBook::Read()
 {
-    int select;
     headers();
     for(int i = 0; i < 8; i++)
     {
@@ -35,9 +57,7 @@ void PhoneBook::Read()
         std::cout << std::setw(10) << FormatText((_contact + i)->getNickName()) << "|" << std::endl;
         PrintS("+----------+----------+----------+----------+");
     }
-    PrintS("Select a contact the table");
-    std::cin >> select - 1;
-    std::cout << (_contact + select)->getFirstName() << std::endl;
+    UserContact();
 }
 
 void PhoneBook::Menu()
@@ -46,8 +66,9 @@ void PhoneBook::Menu()
 
     while (1)
     {
+        PrintS("");
         PrintS("************************");
-        PrintS("SELECT ADD, SEARCH, EXIT");
+        PrintS("Select ADD, SEARCH, EXIT");
         PrintS("************************");
         std::cin >> menu;
         if (menu == "ADD")

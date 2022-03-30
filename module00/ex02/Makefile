@@ -1,4 +1,4 @@
-SRCS	= Diaanio.cpp main.cpp
+SRCS	= Account.cpp tests.cpp
 OBJS	= ${SRCS:.cpp=.o}
 NAME	= demo
 CLANG	= clang++ 

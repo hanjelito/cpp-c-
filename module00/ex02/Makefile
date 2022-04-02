@@ -1,6 +1,6 @@
 SRCS	= Account.cpp tests.cpp
 OBJS	= ${SRCS:.cpp=.o}
-NAME	= demo
+NAME	= tests
 CLANG	= clang++ 
 RM		= rm -f
 CFLAGS	= -Wall -Werror -Wextra -std=c++98

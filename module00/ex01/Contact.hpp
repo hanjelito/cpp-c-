@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 04:02:17 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/02 04:02:18 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/02 04:35:44 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,62 +28,21 @@ class Contact
 		std::string	_phone;
 		std::string	_darkest_secret;
 	public:
-		Contact()
-		{
-			this->_index = this->_ID;
-		}
-		~Contact()
-		{
-		}
-		void setFirstName(std::string first_name)
-		{
-			this->_first_name = first_name;
-		}
-		void setLastName(std::string last_name)
-		{
-			this->_last_name = last_name;
-		}
-		void setNickNamea(std::string nick_name)
-		{
-			this->_nick_name = nick_name;
-		}
-		void setPhone(std::string phone)
-		{
-			this->_phone = phone;
-		}
-		void setDarkestSecret(std::string darkest_secret)
-		{
-			this->_darkest_secret = darkest_secret;
-		}
-		void indexID()
-		{	
-			this->_ID++;
-		}
-		int getID()
-		{
-			this->_index = this->_ID;
-			return this->_ID;
-		}
-		std::string getFirstName() const
-		{
-			return this->_first_name;
-		}
-		std::string getLastName() const
-		{
-			return this->_last_name;
-		}
-		std::string getNickName() const
-		{
-			return this->_nick_name;
-		}
-		std::string getPhone() const
-		{
-			return this->_phone;
-		}
-		std::string getDarkestSecret() const
-		{
-			return this->_darkest_secret;
-		}
+		Contact();
+		~Contact();
+		void setFirstName(std::string first_name);
+		void setLastName(std::string last_name);
+		void setNickNamea(std::string nick_name);
+		void setPhone(std::string phone);
+		void setDarkestSecret(std::string darkest_secret);
+		void indexID();
+		int getID();
+		std::string getFirstName() const;
+		std::string getLastName() const;
+		std::string getNickName() const;
+		std::string getPhone() const;
+		std::string getDarkestSecret() const;
+		static void Add(std::string &value, std::string msg);
 		void RequestData();
 		void Print();
 };

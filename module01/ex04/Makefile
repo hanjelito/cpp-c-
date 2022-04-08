@@ -6,13 +6,13 @@
 #    By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 04:01:58 by juan-gon          #+#    #+#              #
-#    Updated: 2022/04/07 12:17:23 by juan-gon         ###   ########.fr        #
+#    Updated: 2022/04/09 00:15:02 by juan-gon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp  
+SRCS	= main.cpp
 OBJS	= ${SRCS:.cpp=.o}
-NAME	= Humans
+NAME	= replace
 CLANG	= clang++ 
 RM		= rm -f
 CFLAGS	= -Wall -Werror -Wextra -std=c++98

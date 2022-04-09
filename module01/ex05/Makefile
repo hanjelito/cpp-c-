@@ -6,13 +6,13 @@
 #    By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 04:01:58 by juan-gon          #+#    #+#              #
-#    Updated: 2022/04/09 00:15:02 by juan-gon         ###   ########.fr        #
+#    Updated: 2022/04/09 17:42:02 by juan-gon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp
+SRCS	= main.cpp Karen.cpp
 OBJS	= ${SRCS:.cpp=.o}
-NAME	= replace
+NAME	= karen
 CLANG	= clang++ 
 RM		= rm -f
 CFLAGS	= -Wall -Werror -Wextra -std=c++98

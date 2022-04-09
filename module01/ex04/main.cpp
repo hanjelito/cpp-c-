@@ -1,67 +1,105 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/09 16:42:39 by juan-gon          #+#    #+#             */
+/*   Updated: 2022/04/09 16:42:40 by juan-gon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <fstream>
 #include <iostream>
 #include <string>
 
-using std::cerr;
-using std::cout;
-using std::endl;
-using std::getline;
-using std::ifstream;
-using std::ios;
-using std::ofstream;
-using std::size_t;
-using std::string;
-
-int main(int argc, char **argv) {
-    if (argc != 4) {
-        cerr << "./sed <filename> <s1> <s2>" << endl;
-
-        return 1;
+int checkParameter(int argumentCount)
+{
+    if (argumentCount != 4) {
+        std::cout << "./replace <Filename> <tex1> <replace text>" << std::endl;
+        return (1);
     }
+    return (0);
+}
 
-    string infile = argv[1];
-    ifstream fin;
-    fin.open(infile, ios::in);
+std::string outputFile(std::ifstream &readFile)
+{
+	std::string tmp;
+	std::string output;
 
-    if (!fin) {
-        cerr << "error: unable to open " << infile << endl;
-
-        return 2;
+	tmp = "";
+	output = "";
+	while (!readFile.eof())
+    {
+        getline(readFile, tmp);
+        output += tmp;
+        if (!readFile.eof())
+            output += '\n';
     }
+	return (output);
+}
 
-    string outfile = infile + ".replace";
-    ofstream fout;
-    fout.open(outfile, ios::out | ios::trunc);
-
-    if (!fout) {
-        cerr << "error: unable to open " << outfile << endl;
-
-        return 3;
+int existingFile(std::ifstream &readFile, std::string nameFile)
+{
+	
+    readFile.open(nameFile, std::ios::in);
+    if (!readFile)
+    {
+        std::cout << "nonexistent File " << nameFile << std::endl;
+        return (1);
     }
+	return (0);
+}
 
-    string tmp = "";
-    string input = "";
-
-    while (!fin.eof()) {
-        getline(fin, tmp);
-        input += tmp;
-
-        if (!fin.eof())
-            input += '\n';
+int createFile(std::ofstream &fout, std::string &nameFile, std::string &outfile)
+{
+	outfile = nameFile + ".replace";
+	fout.open(outfile, std::ios::out | std::ios::trunc);
+	if (!fout)
+    {
+        std::cout << "unable to write verify permissions " << outfile << std::endl;
+        return (1);
     }
+	return (0);
+}
 
-    fin.close();
-    string s1 = argv[2];
-    string s2 = argv[3];
-    size_t pos = input.find(s1);
+std::string replaceWord(std::string str, std::string s1, std::string s2)
+{
+	size_t pos;
 
-    while (pos != string::npos) {
-        input.erase(pos, s1.length());
-        input.insert(pos, s2);
-        pos = input.find(s1, pos + s2.length());
+	pos = str.find(s1);
+    while (pos != std::string::npos)
+    {
+        str.erase(pos, s1.length());
+        str.insert(pos, s2);
+        pos = str.find(s1, pos + s2.length());
     }
+	return (str);
+}
 
-    fout << input;
+int main(int argc, char **argv)
+{
+	std::string nameFile;
+	std::string s1;
+	std::string s2;
+	std::string outfile;
+    std::string input;
+	std::ifstream readFile;
+    std::ofstream fout;
+
+	if(checkParameter(argc))
+		return (1);
+	nameFile = argv[1];
+	s1 = argv[2];
+	s2 = argv[3];
+	if(existingFile(readFile, nameFile))
+		return (1);
+	if(createFile(fout, nameFile, outfile))
+		return (1);
+	input = outputFile(readFile);
+    readFile.close();
+    fout << replaceWord(input, s1, s2);
     fout.close();
 
     return 0;

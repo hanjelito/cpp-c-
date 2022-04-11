@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 16:42:29 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/10 14:02:30 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/11 12:12:28 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,13 @@ void Karen::karenFilter(std::string bug)
     switch (i)
 	{
 	case 0:
-		complain(i);
-		break;
+		complain(0);
 	case 1:
-		complain(i);
-		break;
+		complain(1);
 	case 2:
-		complain(i);
-		break;
+		complain(2);
 	case 3:
-		complain(i);
+		complain(3);
 		break;
 	default:
 		std::cout << "Comand no register" << std::endl;

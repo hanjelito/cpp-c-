@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/11 15:17:08 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/11 15:17:08 by juan-gon         ###   ########.fr       */
+/*   Created: 2022/04/11 14:06:24 by juan-gon          #+#    #+#             */
+/*   Updated: 2022/04/11 16:32:13 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Fixed.hpp"
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-int main( void )
+#include <iostream>
+#include <string>
+
+class Fixed
 {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
-}
+	private:
+		int _raw;
+		static const  int _NumFractionalBits = 8;
+	public:
+		Fixed( void );
+		Fixed(const Fixed &fixed);
+		Fixed &operator=(const Fixed &fixed);
+		~Fixed(void);
+		void setRawBits ( int const raw );
+		int getRawBits( void ) const;
+};
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 23:53:40 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/14 04:17:53 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/14 13:53:39 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ClapTrap::ClapTrap( const ClapTrap &claptrap)
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap )
 {
-	cout << "ClapTrap " << this->_Name << " was cloned" << endl;
+	cout << "ClapTrap " << claptrap._Name << " was cloned " << this->_Name << endl;
 	this->_Name = claptrap._Name;
 	this->_HitPoints = claptrap._HitPoints;
 	this->_EnergyPoints = claptrap._EnergyPoints;
@@ -50,7 +50,7 @@ ClapTrap::~ClapTrap( void )
 
 void ClapTrap::attack(string const &target)
 {
-	if (!this->_HitPoints)
+	if (this->_EnergyPoints > 0)
 	{
 		--this->_HitPoints;
 		cout	<< "ClapTrap " << this->getName()
@@ -59,33 +59,36 @@ void ClapTrap::attack(string const &target)
 				<< " points of damage!" 
 				<< endl;
 	} else {
-		cout << "ClapTrap " << this->_Name << "has 0 Attack points" << endl;
+		cout << "ClapTrap " << this->_Name << " is dead can't attack "  << endl;
 	}
 }
 
-
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (!this->_EnergyPoints)
+	if (this->_EnergyPoints > 0)
 	{
 		this->_EnergyPoints -= amount;
 		cout	<< "ClapTrap " << this->getName()
-				<< " take " << amount
-				<< " , causing " << this->getAttackDamage()
+				<< " take damage of " << amount
+				<< " , now has " << this->getEnergyPoints()
 				<< " points of Energy!" 
 				<< endl;
 	} else {
-		cout << "ClapTrap " << this->_Name << "has 0 Energy points" << endl;
+		cout << "ClapTrap " << this->_Name << " is dead can't take damage " << endl;
 	}
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (!this->_EnergyPoints)
+	if (this->_EnergyPoints)
 	{
 		this->_EnergyPoints += amount;
+		cout	<< "ClapTrap " << this->getName()
+				<< " is repaired whith " << amount
+				<< " , your energy is  " << this->getEnergyPoints()
+				<< endl;
 	} else {
-		
+		cout << "ClapTrap " << this->_Name << " this dead cannot be repaired." << endl;
 	}
 }
 //

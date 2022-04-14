@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:17:08 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/14 13:51:11 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/14 13:59:00 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main( void )
 	MrT.setName("MrT");
 	
 	Rocky.setAttackDamage(5);
-	MrT.setAttackDamage(3);
+	MrT.setAttackDamage(5);
 	Drago.setAttackDamage(5);
 	Apolo.setAttackDamage(2);
 	

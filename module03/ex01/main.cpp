@@ -6,50 +6,46 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:17:08 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/14 13:59:00 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/20 01:10:21 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 
 int main( void )
 {
-	ClapTrap Rocky;
-	ClapTrap MrT;
-	ClapTrap Drago("Drago");
-	Rocky = ClapTrap("Rocky");
-	ClapTrap Apolo(Drago);
+	ScavTrap Rocky;
+	ScavTrap MrT;
+	ScavTrap Drago("Drago");
+	Rocky = ScavTrap("Rocky");
+	ScavTrap Apolo(Drago);
 	MrT = Drago;
-	//
+	// //
 
-	Apolo.setName("Apolo");
-	MrT.setName("MrT");
-	
-	Rocky.setAttackDamage(5);
-	MrT.setAttackDamage(5);
-	Drago.setAttackDamage(5);
-	Apolo.setAttackDamage(2);
+	Apolo.setNameScav("Apolo");
+	MrT.setNameScav("MrT");
 	
 	
 	cout << "Fight" << endl;
 	//
-	Drago.attack(Rocky.getName());
-	Rocky.takeDamage(Drago.getAttackDamage());
+	Drago.attackScav(Rocky.getName());
+	Rocky.takeDamageScav(Drago.getAttackDamage());
 	//
-	Rocky.attack(Drago.getName());
-	Drago.takeDamage(Rocky.getAttackDamage());
+	Rocky.attackScav(Drago.getName());
+	Drago.takeDamageScav(Rocky.getAttackDamage());
 	//
-	Apolo.attack(Rocky.getName());
-	Rocky.takeDamage(Apolo.getAttackDamage());
+	Apolo.attackScav(Rocky.getName());
+	Rocky.takeDamageScav(Apolo.getAttackDamage());
 	//
-	MrT.attack(Rocky.getName());
-	Rocky.takeDamage(MrT.getAttackDamage());
+	MrT.attackScav(Rocky.getName());
+	Rocky.takeDamageScav(MrT.getAttackDamage());
 	//
-	Rocky.beRepaired(6);
-	Apolo.attack(Rocky.getName());
-	Rocky.takeDamage(Apolo.getAttackDamage());
+	Rocky.beRepairedScav(30);
+	Apolo.attackScav(Rocky.getName());
+	Rocky.takeDamageScav(Apolo.getAttackDamage());
 	
+	Rocky.guardGate();
 	cout << "Finish" << endl;
 	return (0);
 }

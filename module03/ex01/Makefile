@@ -6,13 +6,13 @@
 #    By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 04:01:58 by juan-gon          #+#    #+#              #
-#    Updated: 2022/04/14 00:24:51 by juan-gon         ###   ########.fr        #
+#    Updated: 2022/04/20 00:46:33 by juan-gon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp ClapTrap.cpp
+SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJS		= ${SRCS:.cpp=.o}
-NAME		= ClapTrap
+NAME		= SlavTrap
 CPP			= c++ 
 RM			= rm -f
 CPPFLAGS	= -Wall -Werror -Wextra -std=c++98

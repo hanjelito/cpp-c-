@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 14:16:11 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/14 14:48:42 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/20 09:53:43 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,13 @@ class ScavTrap: public ClapTrap
         ~ScavTrap( void );
 
         void setName(string Name);
-        void guardGate();
+        void attackScav(const string &target);
+        void takeDamageScav(unsigned int amount);
+        void beRepairedScav(unsigned int amount); 
+        void guardGate( void );
+        //
+        void setNameScav(string Name);
+        string getNameScav( void );
 };
 
 #endif

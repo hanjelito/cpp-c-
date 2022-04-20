@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 22:58:44 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/18 11:12:19 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/19 20:53:29 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ using std::string;
 
 class ClapTrap
 {
-	private:
-		// HitPoints -> Puntos de golpe
-		// EnergyPoints -> Puntos de Energía
-		// AttackDamage -> Daño de ataque
+	protected:
 		string	_Name;
 		int		_HitPoints;
 		int		_EnergyPoints;
@@ -37,9 +34,6 @@ class ClapTrap
 		ClapTrap &operator=(const ClapTrap &claptrap );
 		~ClapTrap( void );
 		//
-		// attack -> ataque
-		// recibir daño -> takeDamage
-		// ser reparado -> beRepaired
 		void	attack(string const &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);

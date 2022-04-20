@@ -63,6 +63,11 @@
 		"unordered_map": "cpp",
 		"utility": "cpp",
 		"vector": "cpp",
-		"fstream": "cpp"
+		"fstream": "cpp",
+		"deque": "cpp",
+		"stack": "cpp",
+		"filesystem": "cpp",
+		"__functional_03": "cpp",
+		"memory_resource": "cpp"
 	}
 }

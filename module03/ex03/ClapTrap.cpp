@@ -6,18 +6,18 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 23:53:40 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/18 11:12:27 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/20 00:45:10 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void): _Name("")
+ClapTrap::ClapTrap(): _Name("")
 {
 	this->_HitPoints 	= 10;
 	this->_EnergyPoints = 10;
 	this->_AttackDamage = 0;
-	cout << "A ClapTrap with no name was build" << endl;
+	cout << "A ClapTrap with no name was constructed" << endl;
 }
 
 ClapTrap::ClapTrap(const string Name) : _Name(Name)
@@ -25,7 +25,7 @@ ClapTrap::ClapTrap(const string Name) : _Name(Name)
 	this->_HitPoints 	= 10;
 	this->_EnergyPoints = 10;
 	this->_AttackDamage = 0;
-	cout << "A ClapTrap " << this->_Name << " was build" << endl;
+	cout << "A ClapTrap " << this->_Name << " was constructed" << endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap &claptrap)

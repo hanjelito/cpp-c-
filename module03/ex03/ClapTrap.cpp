@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 23:53:40 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/20 00:45:10 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:54:04 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 			this->_EnergyPoints = 0;
 		else
 			this->_EnergyPoints -= amount;
-		cout	<< "ClapTrap " << this->getName()
+		cout	<< "ClapTrap " << this->_Name
 				<< " take damage of " << amount
 				<< " , now has " << this->getEnergyPoints()
 				<< " points of Energy!" 

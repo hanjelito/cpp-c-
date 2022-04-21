@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 14:16:17 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 10:42:22 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/21 11:57:52 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &scavtrap)
 
 ScavTrap::~ScavTrap(void)
 {
-    cout << "\033[1;33m" << "ScavTrap is destroyed" << "\033[0;37m" << endl;
+    cout << "\033[1;33m" << this->_Name << " ScavTrap is destroyed" << "\033[0;37m" << endl;
 }
 
 void ScavTrap::attack(const string &target)

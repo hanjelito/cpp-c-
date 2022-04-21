@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 10:14:09 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 00:46:10 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/21 11:37:24 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ using std::string;
 using std::cout;
 using std::endl;
 
-class FragTrap: public ClapTrap
+class FragTrap: virtual public ClapTrap
 {
 	public:
 		FragTrap( void );
@@ -28,9 +28,7 @@ class FragTrap: public ClapTrap
 		FragTrap &operator=(FragTrap const &fragtrap);
 		~FragTrap();
 
-		void attackFrag(const string &target);
-		void takeDamageFrag(unsigned int amount);
-		void beRepairedFrag(unsigned int amount); 
+		void attack(const string &target);
 		void highFivesGuys(void);
 	
 };

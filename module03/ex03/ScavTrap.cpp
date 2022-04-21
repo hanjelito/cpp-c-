@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 14:16:17 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 01:08:41 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/21 10:42:22 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ScavTrap::ScavTrap( void )
     this->_HitPoints    = 100;
     this->_EnergyPoints = 50; 
     this->_AttackDamage = 20;
-    cout << "\033[1;33m" << "ScavTrap " << " was constructed no name" << "\033[0;37m" << endl;
+    cout << "\033[1;33m" << "ScavTrap was constructed no name" << "\033[0;37m" << endl;
 }
 
 ScavTrap::ScavTrap(const string Name): ClapTrap::ClapTrap(Name)
@@ -50,13 +50,13 @@ ScavTrap::~ScavTrap(void)
     cout << "\033[1;33m" << "ScavTrap is destroyed" << "\033[0;37m" << endl;
 }
 
-void ScavTrap::attackScav(const string &target)
+void ScavTrap::attack(const string &target)
 {
     if (this->_EnergyPoints > 0)
 	{
 		--this->_HitPoints;
 		cout	<< "\033[1;33m"
-                << "ScavTrap " << this->getNameScav()
+                << "ScavTrap " << this->getName()
 				<< " attack " << target
 				<< " , causing " << this->getAttackDamage()
 				<< " points of damage!" 
@@ -67,15 +67,15 @@ void ScavTrap::attackScav(const string &target)
 	}
 }
 
-void ScavTrap::takeDamageScav(unsigned int amount)
-{
-    this->takeDamage(amount);
-}
+// void ScavTrap::takeDamage(unsigned int amount)
+// {
+//     this->takeDamage(amount);
+// }
 
-void ScavTrap::beRepairedScav(unsigned int amount)
-{
-    this->beRepaired(amount);
-}
+// void ScavTrap::beRepaired(unsigned int amount)
+// {
+//     this->beRepaired(amount);
+// }
 
 void ScavTrap::guardGate(void)
 {
@@ -84,12 +84,12 @@ void ScavTrap::guardGate(void)
 
 //
 
-void ScavTrap::setNameScav(string Name)
+void ScavTrap::setName(string Name)
 {
     this->_Name = Name;
 }
 
- string ScavTrap::getNameScav()
+ string ScavTrap::getName()
  {
      return (this->_Name);
  }

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 14:16:11 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 00:00:59 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/21 10:46:33 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 using std::string;
 
-class ScavTrap: public ClapTrap
+class ScavTrap: virtual public ClapTrap
 {
     public:
         ScavTrap( void );
@@ -28,14 +28,13 @@ class ScavTrap: public ClapTrap
         ScavTrap &operator=( const ScavTrap &scavtrap );
         ~ScavTrap( void );
 
-        // void setName(string Name);
-        void attackScav(const string &target);
-        void takeDamageScav(unsigned int amount);
-        void beRepairedScav(unsigned int amount); 
+        void attack(const string &target);
+        // void takeDamage(unsigned int amount);
+        // void beRepaired(unsigned int amount); 
         void guardGate( void );
         //
-        void setNameScav(string Name);
-        string getNameScav( void );
+        void setName(string Name);
+        string getName( void );
 };
 
 #endif

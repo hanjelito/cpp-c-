@@ -6,19 +6,20 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:17:08 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 01:03:13 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/21 11:47:30 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+
+#include "DiamondTrap.hpp"
 
 int main( void )
 {
-	FragTrap Rocky;
-	FragTrap MrT;
-	FragTrap Drago("Drago");
-	Rocky = FragTrap("Rocky");
-	FragTrap Apolo(Drago);
+	DiamondTrap Rocky;
+	DiamondTrap MrT;
+	DiamondTrap Drago("Drago");
+	Rocky = DiamondTrap("Rocky");
+	DiamondTrap Apolo(Drago);
 	MrT = Drago;
 	//
 
@@ -27,10 +28,12 @@ int main( void )
 	
 	
 	cout << "Fight" << endl;
-	// //
+	//
+	cout <<  Rocky.getName() << endl;
+	Drago.attack(Rocky.getName());
 	Drago.attack(Rocky.getName());
 	Rocky.takeDamage(Drago.getAttackDamage());
-	// //
+	//
 	Rocky.attack(Drago.getName());
 	Drago.takeDamage(Rocky.getAttackDamage());
 	//
@@ -39,14 +42,10 @@ int main( void )
 	//
 	MrT.attack(Rocky.getName());
 	Rocky.takeDamage(MrT.getAttackDamage());
-	//
+	
 	Rocky.beRepaired(30);
 	Apolo.attack(Rocky.getName());
 	Rocky.takeDamage(Apolo.getAttackDamage());
-	
-	Apolo.highFivesGuys();
-	Drago.highFivesGuys();
-	MrT.highFivesGuys();
 	cout << "Finish" << endl;
 	return (0);
 }

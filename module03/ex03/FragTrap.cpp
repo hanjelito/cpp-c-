@@ -6,13 +6,13 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 10:14:03 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 01:04:02 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/21 11:14:36 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap( void )
+FragTrap::FragTrap( void ):ClapTrap::ClapTrap()
 {
 	this->_Name			= "";
 	this->_HitPoints	= 100;

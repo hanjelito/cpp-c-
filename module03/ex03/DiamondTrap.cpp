@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 01:16:49 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 14:15:38 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/22 02:36:23 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,13 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &diamondtrap)
 
 DiamondTrap::~DiamondTrap()
 { 
-	cout << "delete " << this->_Name << this->_HitPoints << this->_EnergyPoints << this->_AttackDamage << endl;
 	cout << "\033[1;35m" << "DiamondTrap " << this->_Name << " is destroyed" << "\033[0;37m" << endl;
+}
+
+void DiamondTrap::whoAmI()
+{
+	cout << "\033[1;35m" << "DiamondTrap: " << this->getName() << ", but my ClapTrap is " << this->FragTrap::getName() << "\033[0;37m" << endl;
+
 }
 
 void DiamondTrap::setName(string Name)

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 14:16:17 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 11:57:52 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/22 02:25:57 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,22 +67,10 @@ void ScavTrap::attack(const string &target)
 	}
 }
 
-// void ScavTrap::takeDamage(unsigned int amount)
-// {
-//     this->takeDamage(amount);
-// }
-
-// void ScavTrap::beRepaired(unsigned int amount)
-// {
-//     this->beRepaired(amount);
-// }
-
 void ScavTrap::guardGate(void)
 {
     cout << "\033[1;33m" << "ScavTrap " << this->_Name << " have enterred in Gate keeper mode" << "\033[0;37m" << endl;
 }
-
-//
 
 void ScavTrap::setName(string Name)
 {

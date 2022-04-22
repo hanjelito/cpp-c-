@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:17:08 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 14:00:00 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/22 02:37:09 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,29 @@ int main( void )
 	//
 	Apolo.setName("Apolo");
 	MrT.setName("MrT");
-	
+	//
 	cout << "Fight" << endl;
 	//
-	// Drago.attack(Rocky.getName());
-	// Rocky.takeDamage(Drago.getAttackDamage());
-	// //
-	// Rocky.attack(Drago.getName());
-	// Drago.takeDamage(Rocky.getAttackDamage());
-	// //
-	// Apolo.attack(Rocky.getName());
-	// Rocky.takeDamage(Apolo.getAttackDamage());
-	// //
-	// MrT.attack(Rocky.getName());
-	// Rocky.takeDamage(MrT.getAttackDamage());
-	
-	// Rocky.beRepaired(30);
-	// Apolo.attack(Rocky.getName());
-	// Rocky.takeDamage(Apolo.getAttackDamage());
+	Drago.attack(Rocky.getName());
+	Rocky.takeDamage(Drago.getAttackDamage());
+	//
+	Rocky.attack(Drago.getName());
+	Drago.takeDamage(Rocky.getAttackDamage());
+	//
+	Apolo.attack(Rocky.getName());
+	Rocky.takeDamage(Apolo.getAttackDamage());
+	//
+	MrT.attack(Rocky.getName());
+	Rocky.takeDamage(MrT.getAttackDamage());
+	//
+	Rocky.beRepaired(30);
+	Apolo.attack(Rocky.getName());
+	Rocky.takeDamage(Apolo.getAttackDamage());
+	//
 	cout << "Finish" << endl;
+	Rocky.whoAmI();
+	Drago.whoAmI();
+	Apolo.whoAmI();
+	MrT.whoAmI();
 	return (0);
 }

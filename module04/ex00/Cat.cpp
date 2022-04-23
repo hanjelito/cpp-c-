@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 02:16:19 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/23 02:43:52 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/23 02:48:29 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat( void ): Animal::Animal()
 	cout << "Cat  was constructed" << endl;
 }
 
-Cat::Cat(const Cat &cat): _Type(cat.getType())
+Cat::Cat(const Cat &cat): Animal("Cat")
 {
 	this->operator=(cat);
 	cout << "Animal Copy constructor called" << endl;

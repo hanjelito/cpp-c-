@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 23:47:03 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/23 02:16:58 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/24 01:01:53 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Cat: public Animal
 		Cat( void );
 		Cat(const Cat &cat);
 		Cat &operator=(const Cat &cat);
-		~Cat();
+		virtual ~Cat();
 		virtual void makeSound( void ) const;
 };
 

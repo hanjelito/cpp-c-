@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 17:10:49 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/23 17:30:52 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/24 01:05:52 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ Dog::Dog(const Dog &dog)
 
 Dog &Dog::operator=(const Dog &dog)
 {
-    this->_Type = dog._Type;
+    // this->_Type = dog._Type;
+    // or
+    this->setType(dog.getType());
+    cout << "Dog " << this->_Type << " assing constructor" << endl;
     return (*this);
 }
 

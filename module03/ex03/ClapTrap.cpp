@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 23:53:40 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 13:54:04 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/23 13:04:06 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &claptrap )
 
 ClapTrap::~ClapTrap( void )
 {
-	cout << "ClapTrap " << this->_Name << " is destroyed" << endl;
+	cout << this->_Name << " ClapTrap "  << " is destroyed" << endl;
 }
 
 void ClapTrap::attack(string const &target)

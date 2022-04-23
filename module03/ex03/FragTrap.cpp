@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 10:14:03 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/21 11:14:36 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/23 13:03:16 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ FragTrap &FragTrap::operator=(const FragTrap &fragtrap)
 
 FragTrap::~FragTrap()
 {
-	cout << "\033[1;32m" << "FragTrap is destroyed" << "\033[0;37m" << endl;
+	cout << "\033[1;32m" << this->_Name << " FragTrap is destroyed" << "\033[0;37m" << endl;
 }
 
 void FragTrap::highFivesGuys(void)

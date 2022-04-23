@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:17:08 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/20 01:10:21 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/23 12:56:23 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,27 @@ int main( void )
 	Rocky = ScavTrap("Rocky");
 	ScavTrap Apolo(Drago);
 	MrT = Drago;
-	// //
-
-	Apolo.setNameScav("Apolo");
-	MrT.setNameScav("MrT");
-	
+	//
+	Apolo.setName("Apolo");
+	MrT.setName("MrT");
 	
 	cout << "Fight" << endl;
 	//
-	Drago.attackScav(Rocky.getName());
-	Rocky.takeDamageScav(Drago.getAttackDamage());
+	Drago.attack(Rocky.getName());
+	Rocky.takeDamage(Drago.getAttackDamage());
 	//
-	Rocky.attackScav(Drago.getName());
-	Drago.takeDamageScav(Rocky.getAttackDamage());
+	Rocky.attack(Drago.getName());
+	Drago.takeDamage(Rocky.getAttackDamage());
 	//
-	Apolo.attackScav(Rocky.getName());
-	Rocky.takeDamageScav(Apolo.getAttackDamage());
+	Apolo.attack(Rocky.getName());
+	Rocky.takeDamage(Apolo.getAttackDamage());
 	//
-	MrT.attackScav(Rocky.getName());
-	Rocky.takeDamageScav(MrT.getAttackDamage());
+	MrT.attack(Rocky.getName());
+	Rocky.takeDamage(MrT.getAttackDamage());
 	//
-	Rocky.beRepairedScav(30);
-	Apolo.attackScav(Rocky.getName());
-	Rocky.takeDamageScav(Apolo.getAttackDamage());
+	Rocky.beRepaired(30);
+	Apolo.attack(Rocky.getName());
+	Rocky.takeDamage(Apolo.getAttackDamage());
 	
 	Rocky.guardGate();
 	cout << "Finish" << endl;

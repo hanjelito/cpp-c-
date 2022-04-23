@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:17:08 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/22 02:37:09 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/23 13:01:52 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,21 @@ int main( void )
 	Rocky.takeDamage(Apolo.getAttackDamage());
 	//
 	cout << "Finish" << endl;
+	//
+	Rocky.highFivesGuys();
+	Drago.highFivesGuys();
+	Apolo.highFivesGuys();
+	MrT.highFivesGuys();
+	//
+	Rocky.guardGate();
+	Drago.guardGate();
+	Apolo.guardGate();
+	MrT.guardGate();
+	//
 	Rocky.whoAmI();
 	Drago.whoAmI();
 	Apolo.whoAmI();
 	MrT.whoAmI();
+	//
 	return (0);
 }

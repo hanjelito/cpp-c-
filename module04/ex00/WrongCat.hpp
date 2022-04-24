@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 18:03:57 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/22 20:59:44 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/24 22:48:30 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,13 @@ class WrongCat: public WrongAnimal
 	public:
 		WrongCat( void );
 		WrongCat(const WrongCat &wrongcat);
-		WrongCat &operator=(const WrongCat &wrongcat);\
+		WrongCat &operator=(const WrongCat &wrongcat);
 		~WrongCat();
-		virtual void makeSound( void ) const;
+		//
+		void makeSound( void ) const;
+		//
+		void setType(string Type);
+		string getType( void ) const;
 };
 
 #endif

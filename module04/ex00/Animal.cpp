@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 00:48:39 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/24 01:11:24 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/24 13:47:04 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Animal  &Animal::operator=(const Animal &animal)
 	// this->_Type = animal._Type;
 	// or
 	this->setType(animal.getType());
-	cout << "Animal: " << this->_Type << " Assing constructor" << endl;
+	cout << "Animal: " << this->_Type << "  cloned constructor" << endl;
 	return (*this);
 }
 

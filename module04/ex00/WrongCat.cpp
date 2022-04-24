@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 11:04:50 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/24 14:13:02 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/24 23:43:38 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,30 @@
 
 WrongCat::WrongCat(): WrongAnimal("Cat")
 {
-	cout << this->_Type << "Create Constructor" << endl;
+	cout << YELLOW << this->_Type << " Create Constructor" << WHITE << endl;
 }
 
 WrongCat::WrongCat(const WrongCat &wrongcat)
 {
-	cout << this->_Type << " as copy constructor";
+	cout << YELLOW << this->_Type << " as copy constructor" << WHITE << endl;
 	this->operator=(wrongcat);
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &wrongcat)
 {
 	this->_Type = wrongcat.getType();
-	cout << this->_Type << "as cloned constructor" << endl;
+	cout << YELLOW << this->_Type << " as cloned constructor" << WHITE << endl;
 	return (*this);
 }
 
 WrongCat::~WrongCat()
 {
-	cout << this->getType() << " as destroyed" << endl;
+	cout << YELLOW << this->getType() << " as destroyed" << WHITE << endl;
 }
 //
 void WrongCat::makeSound() const
 {
-	 cout << this->_Type << "beeeeee " << endl;
+	 cout << YELLOW << this->_Type << " Memememeooooouuuuuuu" << WHITE << endl;
 }
 //
 void WrongCat::setType(string Type) 

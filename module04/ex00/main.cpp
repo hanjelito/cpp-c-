@@ -6,12 +6,11 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:17:08 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/24 22:48:57 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/25 00:12:11 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongCat.hpp"
@@ -37,7 +36,7 @@ int main()
 		delete i;
 	}
 	{
-		cout << "new program" << endl;
+		cout << RED << "\n/***********************/\n" << WHITE << endl;
 	}
 	{
 		const WrongAnimal *meta = new WrongAnimal();

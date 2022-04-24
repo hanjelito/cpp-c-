@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 16:04:52 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/24 01:01:29 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/25 00:20:54 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class Dog: public Animal
 		Dog( void );
 		Dog(const Dog &dog);
 		Dog &operator=(const Dog &dog);
-		virtual ~Dog();
-		virtual void makeSound( void ) const;
+		~Dog();
+		void makeSound( void ) const;
 };
 
 #endif

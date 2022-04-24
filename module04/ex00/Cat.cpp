@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 02:16:19 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/24 13:43:45 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/24 23:35:35 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,28 @@
 
 Cat::Cat( void ): Animal("Cat")
 {
-	cout << "Cat  was constructed" << endl;
+	cout << YELLOW << "Cat  was constructed" << WHITE << endl;
 }
 
 Cat::Cat(const Cat &cat)
 {
-	cout << "Cat Copy constructor called" << endl;
+	cout << YELLOW <<  "Cat Copy constructor called" << WHITE << endl;
 	this->operator=(cat);
 }
 
 Cat &Cat::operator=(const Cat &cat)
 {
 	this->_Type = cat._Type;
-	cout << "Cat " << this->_Type << " cloned constructor" << endl;
+	cout << YELLOW << "Cat " << this->_Type << " cloned constructor" << WHITE << endl;
 	return (*this);
 }
 
 Cat::~Cat()
 {
-	cout << "Cat is destroyed" << endl;
+	cout << YELLOW << "Cat is destroyed" << WHITE << endl;
 }
 //
 void Cat::makeSound( void ) const
 {
-	cout << this->_Type << " Miauuuu" << endl;
+	cout << YELLOW << this->_Type << " Miauuuu" << WHITE << endl;
 }

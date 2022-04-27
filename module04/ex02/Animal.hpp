@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 11:46:16 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/27 02:51:43 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/27 18:04:27 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Animal
 		Animal(const string Type);
 		Animal(const Animal &animal);
 		Animal &operator=(const Animal &animal);
-		virtual ~Animal( void ) = 0;
+		virtual ~Animal( void );
 		virtual void makeSound(void) const = 0;
 		void setType(const string Type);
 		string getType( void ) const;

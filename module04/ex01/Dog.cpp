@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 17:10:49 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/27 02:21:38 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/27 22:49:30 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 Dog::Dog(): Animal::Animal("Dog"), _Brain(new Brain)
 {
-    _Brain->setIdeas();
-	this->beDeep();
     cout << BLUE << "Dog was constructed" << WHITE << endl;
+	this->beDeep();
 }
 
 Dog::Dog(const Dog &dog): Animal("Dog"), _Brain(new Brain)
 {
-    _Brain->setIdeas();
-	this->beDeep();
     cout << BLUE  << "Dog Copy constructor called" << WHITE << endl;
+	this->beDeep();
     this->operator=(dog);
 }
 
@@ -49,5 +47,5 @@ void  Dog::makeSound() const
 
 void Dog::beDeep() const
 {
-	cout << BLUE << this->_Type << this->_Brain->getIdeas() << WHITE << endl;
+	cout << BLUE << this->_Type << " is thinking: " << this->_Brain->getIdeas() << WHITE << endl;
 }

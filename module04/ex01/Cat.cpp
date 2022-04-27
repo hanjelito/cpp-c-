@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 02:16:19 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/27 02:21:07 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/27 22:49:26 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 Cat::Cat( void ): Animal("Cat"), _Brain(new Brain)
 {
-	_Brain->setIdeas();
-	this->beDeep();
 	cout << YELLOW << "Cat  was constructed" << WHITE << endl;
+	this->beDeep();
 }
 
 Cat::Cat(const Cat &cat): Animal("Cat"), _Brain(new Brain)
 {
-	_Brain->setIdeas();
-	this->beDeep();
 	cout << YELLOW <<  "Cat Copy constructor called" << WHITE << endl;
+	this->beDeep();
 	this->operator=(cat);
 }
 
@@ -47,5 +45,5 @@ void Cat::makeSound( void ) const
 
 void Cat::beDeep() const
 {
-	cout << YELLOW << this->_Type << this->_Brain->getIdeas() << WHITE << endl;
+	cout << YELLOW << this->_Type << " is thinking: "  << this->_Brain->getIdeas() << WHITE << endl;
 }

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 00:28:06 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/27 01:51:30 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/27 22:43:06 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Brain::Brain()
 {
 	cout << GREEN << "Brain as construted" << WHITE << endl;
+	this->setIdeas();
 }
 
 Brain::Brain(Brain const &other)

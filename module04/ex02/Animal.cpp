@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 00:48:39 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/24 23:59:27 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/27 02:16:42 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,10 @@ void Animal::setType(const string Type)
 string Animal::getType( void ) const
 {
 	return (this->_Type);
+}
+
+void Animal::beDeep(void) const
+{
+    std::cout << "ummm" << std::endl;
+    return;
 }

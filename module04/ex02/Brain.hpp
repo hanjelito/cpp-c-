@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/22 11:46:16 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/27 22:51:53 by juan-gon         ###   ########.fr       */
+/*   Created: 2022/04/25 00:27:55 by juan-gon          #+#    #+#             */
+/*   Updated: 2022/04/27 01:32:35 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
 #include <iostream>
+#include <fstream>
+#include <stdlib.h>
 #include <string>
-#include "Brain.hpp"
 
 # define WHITE	"\033[0;37m"
 # define YELLOW	"\033[1;33m"
@@ -26,24 +27,24 @@
 # define GRAY	"\033[1;30m"
 # define CYAN	"\033[1;36m"
 
+#define N_IDEAS 100
+
 using std::string;
 using std::cout;
 using std::endl;
+using std::ifstream;
 
-class Animal
+class Brain
 {
-	protected:
-		string _Type;
+	private:
+		string _Ideas[N_IDEAS];
 	public:
-		Animal( void );
-		Animal(const string Type);
-		Animal(const Animal &animal);
-		Animal &operator=(const Animal &animal);
-		virtual ~Animal( void );
-		virtual void makeSound(void) const = 0;
-		virtual void beDeep(void) const;
-		void setType(const string Type);
-		string getType( void ) const;
+		Brain( void );
+		Brain( Brain const &other);
+		Brain &operator=(Brain const &other);
+		virtual ~Brain();
+		void setIdeas( void );
+		string const getIdeas( void ) const;
 };
 
 #endif

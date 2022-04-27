@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 15:17:08 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/27 22:11:09 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/27 22:53:41 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ using std::endl;
 int main()
 {
     {
-        // const Animal *meta = new Animal();
-        // meta->makeSound();
-        // delete meta;
+        const Animal *meta = new Animal();
+        meta->makeSound();
+        delete meta;
     }
     {
         const Animal* j = new Dog();

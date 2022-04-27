@@ -6,11 +6,11 @@
 #    By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 04:01:58 by juan-gon          #+#    #+#              #
-#    Updated: 2022/04/27 02:48:16 by juan-gon         ###   ########.fr        #
+#    Updated: 2022/04/27 00:07:59 by juan-gon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRCS		= main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJS		= ${SRCS:.cpp=.o}
 NAME		= Animal
 CPP			= c++ 

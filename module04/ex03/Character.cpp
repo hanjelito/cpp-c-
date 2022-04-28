@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 02:16:36 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/28 03:03:09 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/29 01:26:34 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,4 @@ Character::Character(string const Name): _Name(Name)
 
 Character::~Character()
 {
-	
 }

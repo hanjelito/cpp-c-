@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 01:28:53 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/28 03:04:21 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/04/29 01:56:51 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ class Character: public ICharacter
 		//
 		void setName( string const &Name );
 		string const &getName( void ) const;
-
-
 };
 
 #endif

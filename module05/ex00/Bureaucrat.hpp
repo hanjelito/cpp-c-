@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 02:27:59 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/04 16:51:57 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/04 16:58:51 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,10 @@ class Bureaucrat
 		//
 		void upGrade( void );
 		void downGrade( void );
-		void checkGrade(int const &grade) const;
+		// void checkGrade(int const &grade) const;
 		string const &getName( void ) const;
 		int getGrade( void ) const;
+		// void setGrade( int Grade ) const;
 
 };
 

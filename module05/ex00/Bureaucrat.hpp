@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 02:27:59 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/04/29 03:11:26 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/04 16:51:57 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ using std::cout;
 using std::endl;
 using std::exception;
 using std::ostream;
+
+#define MIN_GRADE 1
+#define MAX_GRADE 150
 
 class Bureaucrat
 {
@@ -40,19 +43,18 @@ class Bureaucrat
 			public:
 				virtual const char *what() const throw ();
 		};
-		class GradeTooLowException : public std::exception
+		class GradeTooLowException : public exception
 		{
 			public:
 				virtual const char *what() const throw ();
 		};
 		//
-		void setGrade(int grade);
-		int getGrade( void );
-		void setName(string Grade);
-		string const &getName( void ) const;
-
 		void upGrade( void );
 		void downGrade( void );
+		void checkGrade(int const &grade) const;
+		string const &getName( void ) const;
+		int getGrade( void ) const;
+
 };
 
 ostream &operator<<(ostream &o, Bureaucrat &rhs);

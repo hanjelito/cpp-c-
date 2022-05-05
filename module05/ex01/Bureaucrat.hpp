@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 02:27:59 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/05 09:48:00 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/05 23:44:07 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <string>
-#include <exception>
+#include "Form.hpp"
 
 using std::string;
 using std::cout;
@@ -52,6 +52,8 @@ class Bureaucrat
 		void upGrade( void );
 		void downGrade( void );
 		void checkGrade(int const &grade) const;
+		//
+		void signForm(Form &form);
 		//
 		string const &getName( void ) const;
 		int getGrade( void ) const;

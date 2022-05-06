@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 23:52:20 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/06 20:47:50 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/07 01:42:37 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ Form::Form( void ): _Name("NoName"), _GradeSign(MIN_GRADE), _GradeExecute(MIN_GR
 
 Form::Form(string name, int gradeSign, int gradeExecute): _Name(name), _GradeSign(gradeSign), _GradeExecute(gradeExecute)
 {
-	// checkGrade(this->_GradeSign);
-	// checkGrade(this->_GradeExecute);
+	checkGrade(this->_GradeSign);
+	checkGrade(this->_GradeExecute);
 	this->_isSigned = false;
 }
 
@@ -73,7 +73,7 @@ void Form::beSigned(Bureaucrat const &bureaucrat)
 	if(this->_GradeSign < bureaucrat.getGrade())
 	{
 		cout << "The bureaucrat too low grade to sign the form" << endl;
-		throw Form::GradeTooLowException();
+		throw GradeTooLowException();
 	}
 	cout	<< "Bureaucrat " << bureaucrat.getName() << " grade :" << bureaucrat.getGrade()
 			<< " has signed " << this->_Name << " grade: " << this->_GradeSign

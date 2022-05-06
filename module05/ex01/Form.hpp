@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 22:47:41 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/06 01:13:17 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/06 20:33:13 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,17 @@
 #define FORM_HPP
 
 #include <iostream>
+#include <stdexcept>
 #include <string>
 #include "Bureaucrat.hpp"
+
 
 using std::string;
 using std::cout;
 using std::endl;
+using std::exception;
+
+class Bureaucrat;
 
 class Form
 {
@@ -33,7 +38,7 @@ class Form
 		Form(string name, int gradeSign, int gradeExecute);
 		Form(Form const &form);
 		Form &operator=(Form const &form);
-		~Form( void );
+		virtual ~Form( void );
 		//
 		string	getName( void ) const;
 		int		getGradeSign( void ) const;
@@ -44,10 +49,16 @@ class Form
 		void beSigned(Bureaucrat const &bureaucrat);
 		void checkGrade(int const &grade) const;
 		//
-		class GradeTooHighException: public Bureaucrat::GradeTooHighException
-		{};
-		class GradeTooLowException: public Bureaucrat::GradeTooLowException
-		{};
+		class GradeTooHighException: public exception
+		{
+			public:
+				virtual const char *what() const throw ();
+		};
+		class GradeTooLowException : public exception
+		{
+			public:
+				virtual const char *what() const throw ();
+		};
 };
 
 std::ostream& operator << ( std::ostream &out, const Form &Form);

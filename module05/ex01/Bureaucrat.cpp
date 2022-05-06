@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 12:44:18 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/05 12:07:46 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/06 20:48:59 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,11 @@ string const &Bureaucrat::getName( void ) const
 int Bureaucrat::getGrade ( void ) const
 {
 	return (this->_Grade);
+}
+
+void Bureaucrat::signForm(Form &form)
+{
+	cout << "change" << form.getGradeSign()  << endl;
 }
 //
 const char *Bureaucrat::GradeTooHighException::what(void) const throw()

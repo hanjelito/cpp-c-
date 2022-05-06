@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 02:27:59 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/05 23:44:07 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/06 20:41:44 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 #define BUREACRAT_HPP
 
 #include <iostream>
+#include <stdexcept>
 #include <string>
 #include "Form.hpp"
+
 
 using std::string;
 using std::cout;
@@ -25,6 +27,8 @@ using std::ostream;
 
 #define MAX_GRADE 1
 #define MIN_GRADE 150
+
+class Form;
 
 class Bureaucrat
 {
@@ -52,9 +56,9 @@ class Bureaucrat
 		void upGrade( void );
 		void downGrade( void );
 		void checkGrade(int const &grade) const;
-		//
+		
 		void signForm(Form &form);
-		//
+		
 		string const &getName( void ) const;
 		int getGrade( void ) const;
 		void setGrade( int const &grade );
@@ -62,5 +66,4 @@ class Bureaucrat
 };
 
 ostream &operator<<(ostream &o, Bureaucrat &rhs);
-
 #endif

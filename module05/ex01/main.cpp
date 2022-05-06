@@ -5,42 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/05 08:56:20 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/05 12:56:55 by juan-gon         ###   ########.fr       */
+/*   Created: 2022/05/06 01:14:32 by juan-gon          #+#    #+#             */
+/*   Updated: 2022/05/06 20:08:21 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-int main (void)
+int	main()
 {
-	//example1
-	Bureaucrat a;
-	Bureaucrat b("Angel", 150);
-	a = b;
+	Bureaucrat a("Morgan Freeman", 145);
+	// Bureaucrat b("Tom Holan", 21);
+	// Bureaucrat c("Vanessa Maer", 42);
 	cout << a << endl;
-	cout << b << endl;
-
-	Bureaucrat c(b);
-	a.setGrade(40);
-	cout << "END\n\n" << endl;
-	//
-	//end example2
-	Bureaucrat *multi = new Bureaucrat[30];
-	for (size_t i = 0; i < 30; i++)
-	{
-		int ran = rand() % 160 + 1;
-		try
-		{
-			multi[i].setGrade(ran);
-			cout << multi[i] << endl;
-		}
-		catch(const std::exception& e)
-		{
-			std::cerr << e.what() << '\n';
-		}
-	}
-	
-	delete []multi;
-	return (0);
+	return 0;
 }

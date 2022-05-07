@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 12:44:18 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/06 20:48:59 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/07 15:23:13 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,22 @@ int Bureaucrat::getGrade ( void ) const
 
 void Bureaucrat::signForm(Form &form)
 {
-	cout << "change" << form.getGradeSign()  << endl;
+    if (form.getisSigned())
+    {
+        cout << RED << "Form already signed" << WHITE << endl;
+        return;
+    } 
+    if (this->_Grade > form.getGradeSign())
+    {
+        cout << RED << "Bureaucrat " << this->_Name << " (grade: " << this->_Grade << ") "
+                  << "cannot sign form " << form.getName() << " (grade: " << form.getGradeSign() << ") "
+                  << "Grade too low" << WHITE << endl;
+        return;
+    }
+    form.beSigned(*this);
+    return;
 }
+
 //
 const char *Bureaucrat::GradeTooHighException::what(void) const throw()
 {
@@ -88,6 +102,6 @@ const char *Bureaucrat::GradeTooLowException::what(void) const throw()
 
 std::ostream &operator<<(std::ostream &o, Bureaucrat &rhs)
 {
-    o << rhs.getName() << ", bureaucrat : grades " << rhs.getGrade();
+    o << RED << rhs.getName() << ", bureaucrat : grades " << rhs.getGrade() << WHITE;
     return (o);
 }

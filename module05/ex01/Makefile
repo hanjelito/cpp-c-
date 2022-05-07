@@ -6,13 +6,13 @@
 #    By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 04:01:58 by juan-gon          #+#    #+#              #
-#    Updated: 2022/05/06 19:10:47 by juan-gon         ###   ########.fr        #
+#    Updated: 2022/05/07 14:59:03 by juan-gon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		= main.cpp Bureaucrat.cpp Form.cpp
 OBJS		= ${SRCS:.cpp=.o}
-NAME		= a.out
+NAME		= Bureaucrat
 CPP			= c++ 
 RM			= rm -f
 CPPFLAGS	= -Wall -Werror -Wextra -std=c++98 -pedantic-errors

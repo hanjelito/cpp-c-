@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 01:14:32 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/07 01:51:42 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/07 15:24:03 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,16 @@ int	main()
 	cout << c << endl;
 	cout << f << endl;
 
-	f.beSigned(a);
+	b.signForm(f);
+	try
+	{
+		f.beSigned(a);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
+	
 	return 0;
 }

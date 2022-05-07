@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 23:52:20 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/07 01:42:37 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/07 15:06:51 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,17 +67,17 @@ void Form::beSigned(Bureaucrat const &bureaucrat)
 {
 	if(this->_isSigned)
 	{
-		cout << "Form already signed" << endl;
+		cout << GREEN << "Form already signed" << WHITE << endl;
 		return;
 	}
 	if(this->_GradeSign < bureaucrat.getGrade())
 	{
-		cout << "The bureaucrat too low grade to sign the form" << endl;
+		cout << GREEN << "The bureaucrat too low grade to sign the form" << WHITE << endl;
 		throw GradeTooLowException();
 	}
-	cout	<< "Bureaucrat " << bureaucrat.getName() << " grade :" << bureaucrat.getGrade()
-			<< " has signed " << this->_Name << " grade: " << this->_GradeSign
-			<< endl;
+	cout	<< GREEN << "Bureaucrat " << bureaucrat.getName() << " grade :" << bureaucrat.getGrade()
+			<< " has signed Form" << this->_Name << " grade: " << this->_GradeSign
+			<< WHITE << endl;
 
 }
 
@@ -102,9 +102,9 @@ const char *Form::GradeTooLowException::what(void) const throw()
 
 std::ostream &operator<<(std::ostream &o, const Form &Form)
 {
-    o << "Form " << Form.getName() << ". "
+    o << GREEN << "Form " << Form.getName() << ". "
       << "status: ( signed: " << std::boolalpha << Form.getisSigned() << ", "
       << "gradeToSign: " << Form.getGradeSign() << ", gradeToExec: " << Form.getGradeExecute()
-      << " )";
+      << " )" << WHITE;
     return (o);
 }

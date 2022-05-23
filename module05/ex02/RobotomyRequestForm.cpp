@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 12:47:49 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/23 23:37:23 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/24 00:22:03 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 		else
 			cout << "It's a failure !" << endl;
 	}
+	(void)executor;
 }
 //
 void RobotomyRequestForm::setTarget(string const &target)

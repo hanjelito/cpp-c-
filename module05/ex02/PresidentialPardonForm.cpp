@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 22:33:56 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/21 01:17:47 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/24 00:21:39 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 	} else {
 		cout << this->getTarget() << " has been pardoned by Zafod Beeblebrox." << endl;
 	}
+	(void)executor;
 }
 //
 void PresidentialPardonForm::setTarget(std::string const &target)

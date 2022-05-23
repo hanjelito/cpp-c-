@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 12:47:49 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/24 00:22:03 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/24 00:26:35 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,10 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 		srand(time(0));
 		success = ( rand() % 100 );
 		if(success > 50)
-			cout << "Rizzzzzzzz, target " << getTarget() << " has been robotomized successfully 50% of the time" << endl;
+			cout << executor.getName() << "Rizzzzzzzz, target " << getTarget() << " has been robotomized successfully 50% of the time" << endl;
 		else
 			cout << "It's a failure !" << endl;
 	}
-	(void)executor;
 }
 //
 void RobotomyRequestForm::setTarget(string const &target)

@@ -6,21 +6,18 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 22:33:56 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/21 01:16:36 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/21 01:17:47 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm( void ):Form("Presidential Pardon", 145, 137), _target("none")
-{
-	// cout << <target> "has been pardoned by Zafod Beeblebrox" << endl;
-}
+{}
 
 PresidentialPardonForm::PresidentialPardonForm(string const target): Form("Presidential Pardon", 145, 137)
 {
-	this->setTarget(target);
-	
+	this->setTarget(target);	
 }
 
 PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &o): Form("Presidential Pardon", 145, 137)

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 12:44:18 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/13 14:00:03 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/23 23:16:28 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,24 @@ void Bureaucrat::signForm(Form &form)
     }
     form.beSigned(*this);
     return;
+}
+//
+void Bureaucrat::executeForm(Form const &form)
+{
+    if(!(form.getisSigned()))
+    {
+        cout << this->getName() << " Form is not signed" << endl;
+        return;
+    }
+    try
+    {
+        form.execute(*this);
+        cout << this->getName() << " has executed " << form.getName() << "." << endl;
+    }
+    catch(const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
 }
 
 //

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 18:51:53 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/19 19:00:29 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/23 23:36:06 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <time.h>
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
@@ -22,6 +23,8 @@ using std::string;
 
 class RobotomyRequestForm: public Form
 {
+	private:
+		string _target;
 	public:
 		RobotomyRequestForm( void );
 		RobotomyRequestForm(string const target);
@@ -30,6 +33,9 @@ class RobotomyRequestForm: public Form
 		~RobotomyRequestForm( void );
 		//
 		void execute(Bureaucrat const &executor) const;
+		//
+		void setTarget(string const &target);
+		string getTarget(void) const;
 };
 
 #endif

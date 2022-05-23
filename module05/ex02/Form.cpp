@@ -6,11 +6,12 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 23:52:20 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/17 19:14:50 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/23 22:36:50 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form( void ):
 	_Name("NoName"),

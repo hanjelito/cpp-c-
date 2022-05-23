@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 22:47:41 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/13 17:41:12 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/23 22:55:58 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ class Form
 		//
 		void beSigned(Bureaucrat const &bureaucrat);
 		void checkGrade(int const &grade) const;
+		//
+		virtual void execute(Bureaucrat const &executor) const = 0;
 		//
 		class GradeTooHighException : public Bureaucrat::GradeTooHighException
 		{};

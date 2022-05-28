@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Tue May 24 00:20:34 2022
+# Make data base, printed on Sat May 28 01:07:50 2022
 
 # Variables
 
@@ -28,7 +28,7 @@ CURDIR := /Users/angel/Desktop/c++
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"es-419","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"es-419","availableLanguages":{"*":"es"},"_languagePackId":"125a9a608456aa5e8a25d0a18c7b1d68.es","_translationsConfigFile":"/Users/angel/Library/Application Support/Code/clp/125a9a608456aa5e8a25d0a18c7b1d68.es/tcf.json","_cacheRoot":"/Users/angel/Library/Application Support/Code/clp/125a9a608456aa5e8a25d0a18c7b1d68.es","_resolvedLanguagePackCoreLocation":"/Users/angel/Library/Application Support/Code/clp/125a9a608456aa5e8a25d0a18c7b1d68.es/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/Users/angel/Library/Application Support/Code/clp/125a9a608456aa5e8a25d0a18c7b1d68.es/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile
@@ -38,19 +38,25 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/l7/98rkvd9s1kz2lm15cmv8x34h0000gn/T/vscode-ipc-331ceb46-0e06-491d-a61f-9fbc448707e2.sock
+P9K_SSH = 0
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/l7/98rkvd9s1kz2lm15cmv8x34h0000gn/T/vscode-ipc-f8d52cb9-d064-4693-a001-47d619483d5e.sock
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+PATH = /usr/local/sbin:/Users/angel/.pyenv/bin:/usr/local/opt/php@7.4/bin:/Users/angel/development/flutter/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
+# environment
+PYENV_ROOT = /Users/angel/.pyenv
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.pREBrprWcP/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.rZFg6gCgMG/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -62,15 +68,19 @@ ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
+PYENV_SHELL = zsh
+# environment
 HOME = /Users/angel
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/angel/Library/Application Support/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /Users/angel/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = angel
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+ZSH = /Users/angel/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -89,6 +99,8 @@ MAKE_VERSION := 3.81
 USER = angel
 # makefile
 .DEFAULT_GOAL := 
+# environment
+LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -100,7 +112,7 @@ TMPDIR = /var/folders/l7/98rkvd9s1kz2lm15cmv8x34h0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/angel/Library/Application Support/Code/1.67.1-main.sock
+VSCODE_IPC_HOOK = /Users/angel/Library/Application Support/Code/1.67.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -108,7 +120,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.26384190.26384196
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.26957787.26957793
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -122,6 +134,8 @@ MAKEFILES :=
 # automatic
 <F = $(notdir $<)
 # environment
+PAGER = less
+# environment
 LC_ALL = C
 # automatic
 ^F = $(notdir $^)
@@ -134,9 +148,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 864
+VSCODE_PID = 8292
 # variable set hash-table stats:
-# Load=62/1024=6%, Rehash=0, Collisions=1/83=1%
+# Load=69/1024=7%, Rehash=0, Collisions=1/90=1%
 
 # Pattern-specific Variable Values
 
@@ -218,7 +232,7 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Tue May 24 00:20:34 2022
+# Finished Make data base on Sat May 28 01:07:50 2022
 
  
 make: *** No rule to make target `all'.  Stop.

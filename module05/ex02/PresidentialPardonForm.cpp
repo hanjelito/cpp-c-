@@ -6,21 +6,21 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 22:33:56 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/24 00:27:55 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/28 01:53:26 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm( void ):Form("Presidential Pardon", 145, 137), _target("none")
+PresidentialPardonForm::PresidentialPardonForm( void ):Form("Presidential Pardon", 25, 5), _target("none")
 {}
 
-PresidentialPardonForm::PresidentialPardonForm(string const target): Form("Presidential Pardon", 145, 137)
+PresidentialPardonForm::PresidentialPardonForm(string const target): Form("Presidential Pardon", 25, 5)
 {
 	this->setTarget(target);	
 }
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &o): Form("Presidential Pardon", 145, 137)
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &o): Form("Presidential Pardon", 25, 5)
 {
 	 *this = o;
 }
@@ -39,9 +39,9 @@ PresidentialPardonForm::~PresidentialPardonForm( void )
 //
 void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
-	if(!(getisSigned()))
+	if(this->getGradeExecute() < executor.getGrade())
 	{
-		cout << "Form is not signed" << endl;
+		cout << "Form is not signedpppppp" << endl;
 		throw GradeTooLowException();
 	} else {
 		cout << executor.getName() << this->getTarget() << " has been pardoned by Zafod Beeblebrox." << endl;

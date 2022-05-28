@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 12:47:49 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/24 00:26:35 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/28 01:55:25 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ RobotomyRequestForm::~RobotomyRequestForm( void )
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
 	int success = 0;
-	if(!(getisSigned()))
+	if(this->getGradeExecute() < executor.getGrade())
 	{
-		cout << "Form is not signed" << endl;
+		cout << "Form is not signedrrrr" << endl;
 		throw GradeTooLowException();
 	} else {
 		srand(time(0));

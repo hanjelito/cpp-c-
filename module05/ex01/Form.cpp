@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 23:52:20 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/17 19:14:50 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:07:57 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ void Form::beSigned(Bureaucrat const &bureaucrat)
 	cout	<< GREEN << "Bureaucrat " << bureaucrat.getName() << " grade: " << bureaucrat.getGrade()
 			<< " has signed Form" << this->_Name << " grade: " << this->_GradeSign
 			<< WHITE << endl;
+	this->_isSigned = true;
 
 }
 

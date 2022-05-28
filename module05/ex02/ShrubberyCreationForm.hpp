@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 19:32:22 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/19 20:42:38 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/26 10:43:00 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,19 @@
 
 #include <iostream>
 #include <string>
+# include <fstream>
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
 using std::string;
+using std::cout;
+using std::endl;
 
-class ShrubberyCreationForm
+
+class ShrubberyCreationForm: public Form
 {
+	private:
+		string _target;
 	public:
 		ShrubberyCreationForm( void );
 		ShrubberyCreationForm(string const target);
@@ -30,6 +36,9 @@ class ShrubberyCreationForm
 		~ShrubberyCreationForm( void );
 		//
 		void execute(Bureaucrat const  &executor) const;
+		//
+		void setTarget(string const &target);
+		string getTarget( void ) const;
 };
 
 #endif

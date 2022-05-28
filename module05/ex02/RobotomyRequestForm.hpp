@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 18:51:53 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/23 23:36:06 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/25 17:42:22 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 #include "Bureaucrat.hpp"
 
 using std::string;
+using std::cout;
+using std::endl;
 
 class RobotomyRequestForm: public Form
 {

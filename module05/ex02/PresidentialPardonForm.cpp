@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 22:33:56 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/28 02:02:15 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/28 12:29:31 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
 	if(this->getGradeExecute() < executor.getGrade())
 	{
-		cout << "Form is not signed" << endl;
+		cout << YELLOW << "Form is not signed" << WHITE << endl;
 		throw GradeTooLowException();
 	} else {
-		cout << executor.getName() << this->getTarget() << " has been pardoned by Zafod Beeblebrox." << endl;
+		cout << YELLOW  << executor.getName() << this->getTarget() << " has been pardoned by Zafod Beeblebrox." << WHITE << endl;
 	}
 }
 //

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 12:47:49 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/28 02:02:28 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/28 12:25:17 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,15 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	int success = 0;
 	if(this->getGradeExecute() < executor.getGrade())
 	{
-		cout << "Form is not signed" << endl;
+		cout << RED <<  "Form is not signed" << WHITE << endl;
 		throw GradeTooLowException();
 	} else {
 		srand(time(0));
 		success = ( rand() % 100 );
 		if(success > 50)
-			cout << executor.getName() << "Rizzzzzzzz, target " << getTarget() << " has been robotomized successfully 50% of the time" << endl;
+			cout << RED <<executor.getName() << " Rizzzzzzzz, target " << getTarget() << " has been robotomized successfully 50% of the time" << WHITE << endl;
 		else
-			cout << "It's a failure !" << endl;
+			cout << RED << "It's a failure !" << WHITE <<  endl;
 	}
 }
 //

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 17:10:32 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/28 02:01:26 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/28 12:27:20 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,14 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	if(this->getGradeExecute() < executor.getGrade())
     {
-        cout << executor.getName() << "Form is not signed" << endl;
+        cout << PINK << executor.getName() << "Form is not signedddd" << WHITE << endl;
         throw GradeTooLowException();
     } else {
 		string filename(getTarget() + "_shrubbery");
-		std::ofstream data(filename.data());
+		ofstream data(filename.data());
 		if (!data)
 		{
-			std::cout << "Error creation file " << filename << std::endl;
+			cout << PINK << "Error creation file " << filename << WHITE << endl;
 			return;
 		}
 		data <<
@@ -60,7 +60,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 			" ╱╮╰╯╭╮╰╯╭╮╰╲  \n"
 			" ▔▔▔▔▔▔▋▔▔▔▔▔  \n"
 		<< endl;
-		cout << "File " << filename << " create in the directory" << endl;
+		cout << PINK << "File " << filename << " create in the directory" << WHITE << endl;
 		data.close();
 	}
 }

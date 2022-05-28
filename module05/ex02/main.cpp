@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 01:14:32 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/28 01:58:07 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/28 12:45:52 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,28 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
-void print(std::string str)
-{
-    std::cout << str << std::endl;
-    return;
-}
-
 int main(void)
 {
     {
-        print("\n** Basic Constructor");
+        cout << "PresidentialPardonForm" << endl;
         PresidentialPardonForm x;
         std::cout << x << std::endl;
-        print("\n** Copy Constructor");
+
         PresidentialPardonForm y(x);
         std::cout << y << std::endl;
-        print("\n** Assignment");
-        Bureaucrat pro("pro", 1);
-        PresidentialPardonForm z("target");
+
+        Bureaucrat pro("Napoleon", 1);
+        PresidentialPardonForm z("Ring");
         pro.signForm(z);
         pro.executeForm(z);
-        std::cout << "original     :" << z << std::endl;
+        std::cout << "original :" << z << std::endl;
         x = z;
-        std::cout << "after assign :" << x << std::endl; // show signed and target changed
+        std::cout << "after assign :" << x << std::endl;
         x.execute(pro);
     }
     {
-        PresidentialPardonForm a("bubbles the elephant");
-        Bureaucrat b("hamilton", 5);
+        PresidentialPardonForm a("Nixon");
+        Bureaucrat b("Nelson", 5);
 
         b.executeForm(a);
         std::cout << a << std::endl;
@@ -50,20 +44,22 @@ int main(void)
         a.beSigned(b);
         a.execute(b);
 
-        Bureaucrat noob1("noober 1", 6);
-        noob1.executeForm(a);
+        Bureaucrat demo1("reagan", 6);
+        demo1.executeForm(a);
+
         try
         {
-            a.execute(noob1);
+            a.execute(demo1);
         }
         catch (std::exception &e)
         {
-            print(e.what());
+            std::cerr << e.what() << '\n';
         }
     }
     {
-        ShrubberyCreationForm c("santa");
-        Bureaucrat d("rudolph", 137);
+        cout << "ShrubberyCreationForm" << endl;
+        ShrubberyCreationForm c("Noel");
+        Bureaucrat d("Rodolfo", 137);
 
         d.executeForm(c);
         std::cout << c << std::endl;
@@ -71,20 +67,21 @@ int main(void)
         c.beSigned(d);
         c.execute(d);
 
-        Bureaucrat noob2("noober 2", 138);
-        noob2.executeForm(c);
+        Bureaucrat demo2("Mother Noel", 138);
+        demo2.executeForm(c);
         try
         {
-            c.execute(noob2);
+            c.execute(demo2);
         }
         catch (std::exception &e)
         {
-            print(e.what());
+            std::cerr << e.what() << '\n';
         }
     }
     {
-        RobotomyRequestForm e("student");
-        Bureaucrat f("professor", 45);
+        cout << "RobotomyRequestForm" << endl;
+        RobotomyRequestForm e("Studen42");
+        Bureaucrat f("Marvin", 45);
 
         f.executeForm(e);
         std::cout << e << std::endl;
@@ -92,15 +89,15 @@ int main(void)
         e.beSigned(f);
         e.execute(f);
 
-        Bureaucrat noob3("noober 3", 46);
-        noob3.executeForm(e);
+        Bureaucrat demo2("Poolman", 46);
+        demo2.executeForm(e);
         try
         {
-            e.execute(noob3);
+            e.execute(demo2);
         }
         catch (std::exception &e)
         {
-            print(e.what());
+           std::cerr << e.what() << '\n';
         }
 
         return (0);

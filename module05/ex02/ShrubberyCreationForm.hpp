@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 19:32:22 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/26 10:43:00 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/28 12:27:16 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 using std::string;
 using std::cout;
 using std::endl;
-
+using std::ofstream;
 
 class ShrubberyCreationForm: public Form
 {

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 23:52:20 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/05/28 01:19:25 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/05/28 02:01:55 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ void Form::setisSigned(bool isSigned)
 
 void Form::beSigned(Bureaucrat const &bureaucrat)
 {
-	cout << GREEN << "ENTRO" << WHITE << endl;
 	if(this->_isSigned)
 	{
 		cout << GREEN << "Form already signed" << WHITE << endl;

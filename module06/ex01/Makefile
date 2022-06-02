@@ -6,13 +6,13 @@
 #    By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 04:01:58 by juan-gon          #+#    #+#              #
-#    Updated: 2022/05/28 14:33:32 by juan-gon         ###   ########.fr        #
+#    Updated: 2022/06/03 00:40:35 by juan-gon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
+SRCS		= main.cpp
 OBJS		= ${SRCS:.cpp=.o}
-NAME		= Bureaucrat
+NAME		= Serialize
 CPP			= c++ 
 RM			= rm -f
 CPPFLAGS	= -Wall -Werror -Wextra -std=c++98 -pedantic-errors

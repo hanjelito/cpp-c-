@@ -71,6 +71,7 @@
 		"memory_resource": "cpp",
 		"compare": "cpp",
 		"concepts": "cpp",
-		"variant": "cpp"
+		"variant": "cpp",
+		"list": "cpp"
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 02:28:11 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/07/25 02:28:14 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/07/26 00:38:16 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Span
 		std::vector<int> _container;
 		Span( void );
 	public:
-		Span(int unsigned num);
+		Span(unsigned int size);
 		Span( Span const &o);
 		Span &operator=( Span const &o);
 		~Span( void );
@@ -35,7 +35,7 @@ class Span
 		void addNumber(int num);
 		int shortestSpan( void );
 		int longestSpan( void );
-		//
+		
 		class SearchFailed : public std::exception
 		{
 			public:

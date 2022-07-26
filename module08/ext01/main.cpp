@@ -5,43 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 12:06:00 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/07/25 02:12:17 by juan-gon         ###   ########.fr       */
+/*   Created: 2022/07/25 23:47:52 by juan-gon          #+#    #+#             */
+/*   Updated: 2022/07/26 02:10:36 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "span.hpp"
 
-Span::Span( void ): _size(0)
-{}
-
-Span::Span(int unsigned num): _size(num)
-{}
-
-Span::Span( Span const &o)
+int main( void )
 {
-	*this = o;
-}
 
-Span &Span::operator=( Span const &o)
-{
-	if(this != &o)
-	{
-		this->_size = o._size;
-		this->_container.clear();
-		this->_container = o._container;
-	}
-	return (*this);
-}
+		
+	Span sp = Span(5);
+	sp.addNumber(5);
+	sp.addNumber(3);
+	sp.addNumber(17);
+	sp.addNumber(9);
+	sp.addNumber(11);
+	
 
-Span::~Span( void )
-{
-	this->_container.size();
-}
-
-void Span::addNumber(int num)
-{
-	if (this->_container.size() == this->_size)
-		throw Span::FilledUp();
-	this->_container.push_back(num);
+	std::cout << sp.shortestSpan() << std::endl;
+	std::cout << sp.longestSpan() << std::endl;
+	return (0);
 }

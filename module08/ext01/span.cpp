@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 23:47:52 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/07/26 02:12:17 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/07/26 09:55:07 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ int Span::shortestSpan( void )
 {
 	int diff;
 
+	if(this->_container.size() < 2)
+		throw Span::SearchFailed();
 	std::vector<int>::iterator begin = this->_container.begin();
 	//
 	diff = std::abs(*begin - *(begin + 1));
@@ -68,6 +70,8 @@ int Span::longestSpan( void )
 {
 	int diff;
 
+	if(this->_container.size() < 2)
+		throw Span::SearchFailed();
 	std::vector<int>::iterator begin = this->_container.begin();
 	//
 	diff = std::abs(*begin - *(begin + 1));

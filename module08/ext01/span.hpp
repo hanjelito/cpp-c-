@@ -6,7 +6,7 @@
 /*   By: juan-gon <juan-gon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 02:28:11 by juan-gon          #+#    #+#             */
-/*   Updated: 2022/07/26 00:38:16 by juan-gon         ###   ########.fr       */
+/*   Updated: 2022/07/26 09:55:28 by juan-gon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,15 @@ class Span
 		~Span( void );
 		//
 		void addNumber(int num);
+		//
+		template <typename T>
+		void addNumber(T begin, T end )
+		{
+			if ((this->_container.size() + std::distance(begin, end)) > this->_size)
+				throw FilledUp();
+			std::copy(begin, end, std::back_inserter(this->_container));
+		}
+		
 		int shortestSpan( void );
 		int longestSpan( void );
 		
